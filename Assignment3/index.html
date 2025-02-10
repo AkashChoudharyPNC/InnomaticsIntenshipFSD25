@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Problem Solutions</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>JavaScript Problem Solving</h1>
+        <p>Solutions to common JavaScript problems</p>
+    </header>
+
+    <main>
+        <div class="card-container">
+            <div class="card" style="background-image: url('https://paytmblogcdn.paytm.com/wp-content/uploads/2021/11/7_Credit-card_-How-to-Do-Credit-Card-Cash-Withdrawal.jpg');">
+                <div class="card-content">
+                    <h2>1. ATM Withdrawal System</h2>
+                    <input type="number" id="atmBalance" placeholder="Enter balance">
+                    <input type="number" id="atmAmount" placeholder="Enter amount to withdraw">
+                    <input type="password" id="atmPin" placeholder="Enter PIN">
+                    <input type="password" id="atmEnteredPin" placeholder="Enter PIN again">
+                    <button onclick="atmTest()">Test ATM Withdrawal</button>
+                    <textarea id="atmSolution" readonly></textarea>
+                </div>
+            </div>
+
+            <div class="card" style="background-image: url('https://wallpapersok.com/images/high/purchase-cart-blue-aesthetic-lo6zd3hqf15wclg6.jpg');">
+                <div class="card-content">
+                    <h2>2. Online Shopping Discount & Free Shipping</h2>
+                    <input type="number" id="shoppingOrderAmount" placeholder="Enter order amount">
+                    <button onclick="shoppingTest()">Test Shopping Discount</button>
+                    <textarea id="shoppingSolution" readonly></textarea>
+                </div>
+            </div>
+
+            <div class="card" style="background-image: url('https://www.podareducation.org/Uploads/content/2024-3-11--11-10-45-928_Understanding-the-Grading-System-in-CBSE-Board-Exams-banner.jpg');">
+                <div class="card-content">
+                    <h2>3. Student Grading System with Extra Credit</h2>
+                    <input type="number" id="gradingMarks" placeholder="Enter marks">
+                    <input type="number" id="gradingAttendance" placeholder="Enter attendance %">
+                    <button onclick="gradingTest()">Test Grading</button>
+                    <textarea id="gradingSolution" readonly></textarea>
+                </div>
+            </div>
+
+            <div class="card" style="background-image: url('https://media.istockphoto.com/id/1197889687/photo/traffic-lights-and-wet-road-at-night.jpg?s=612x612&w=0&k=20&c=LkMFqkOWmw3JeO4arD4R2SX_hPDpF5FuMqVKHrfIXqI=');">
+                <div class="card-content">
+                    <h2>4. Smart Traffic Light System</h2>
+                    <input type="text" id="trafficDensity" placeholder="Enter traffic density (Heavy/Moderate/Light)">
+                    <button onclick="trafficTest()">Test Traffic Light</button>
+                    <textarea id="trafficSolution" readonly></textarea>
+                </div>
+            </div>
+
+            <div class="card" style="background-image: url('https://www.shutterstock.com/image-photo/airport-woman-ticket-service-smile-600nw-2253207769.jpg');">
+                <div class="card-content">
+                    <h2>5. Movie Ticket Pricing with Time and Age Discount</h2>
+                    <input type="number" id="ticketAge" placeholder="Enter age">
+                    <input type="number" id="ticketShowTime" placeholder="Enter show time (24-hour format)">
+                    <button onclick="ticketTest()">Test Ticket Price</button>
+                    <textarea id="ticketSolution" readonly></textarea>
+                </div>
+            </div>
+
+            <div class="card" style="background-image: url('https://static.toiimg.com/thumb/msid-104888090,width-400,resizemode-4/104888090.jpg');">
+                <div class="card-content">
+                    <h2>6. Job Application Filter</h2>
+                    <input type="number" id="jobAge" placeholder="Enter age">
+                    <input type="number" id="jobExperience" placeholder="Enter experience in years">
+                    <input type="text" id="jobQualification" placeholder="Enter qualification">
+                    <button onclick="jobTest()">Test Job Application</button>
+                    <textarea id="jobSolution" readonly></textarea>
+                </div>
+            </div>
+
+            <div class="card" style="background-image: url('https://builtin.com/sites/www.builtin.com/files/styles/og/public/2022-09/ecommerce.png');">
+                <div class="card-content">
+                    <h2>7. E-commerce Coupon Redemption</h2>
+                    <input type="number" id="couponOrderAmount" placeholder="Enter order amount">
+                    <input type="text" id="couponCode" placeholder="Enter coupon code">
+                    <button onclick="couponTest()">Test Coupon Redemption</button>
+                    <textarea id="couponSolution" readonly></textarea>
+                </div>
+            </div>
+
+            <div class="card" style="background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRWRrqBdkfcv-BbHGwOJzGX8EL9_nJOmVecNg&s');">
+                <div class="card-content">
+                    <h2>8. Fitness Membership Plan</h2>
+                    <input type="text" id="fitnessPlanType" placeholder="Enter plan type (Basic/Premium/VIP)">
+                    <input type="checkbox" id="fitnessTrainer" /> Wants Personal Trainer
+                    <input type="checkbox" id="fitnessDietPlan" /> Wants Diet Plan
+                    <button onclick="fitnessTest()">Test Membership Plan</button>
+                    <textarea id="fitnessSolution" readonly></textarea>
+                </div>
+            </div>
+
+            <div class="card" style="background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT7mhCXPc-cQCGeHi6F2R520yOyodqlr9VCXg&s');">
+                <div class="card-content">
+                    <h2>9. Electricity Bill Calculation with Peak Hours</h2>
+                    <input type="number" id="electricityUnits" placeholder="Enter units">
+                    <input type="number" id="electricityTimeOfDay" placeholder="Enter time of day (24-hour format)">
+                    <button onclick="electricityTest()">Test Electricity Bill</button>
+                    <textarea id="electricitySolution" readonly></textarea>
+                </div>
+            </div>
+
+            <div class="card" style="background-image: url('https://assets.telegraphindia.com/telegraph/c1f195be-91a3-4b2e-9f93-3635f75763f8.jpg');">
+                <div class="card-content">
+                    <h2>10. Flight Ticket Booking System</h2>
+                    <input type="text" id="flightClass" placeholder="Enter class (Economy/Business/First)">
+                    <input type="number" id="flightLuggage" placeholder="Enter luggage weight">
+                    <input type="checkbox" id="flightStudent" /> Is Student
+                    <input type="checkbox" id="flightSenior" /> Is Senior
+                    <button onclick="flightTest()">Test Flight Fare</button>
+                    <textarea id="flightSolution" readonly></textarea>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 PNC</p>
+    </footer>
+
+    <script src="scripts.js"></script>
+</body>
+</html>
