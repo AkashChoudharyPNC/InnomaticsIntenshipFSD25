@@ -1,0 +1,138 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+    text-align: center;
+}
+
+body {
+    background-image: url('https://store-images.s-microsoft.com/image/apps.54588.14090654178473619.aa2706f7-9244-4d37-b59f-3f87f7589476.6a5a6db1-70ba-4b57-a879-7f9264cd3a40?h=1280'); /* Replace with your image */
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    font-family: Arial, sans-serif;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+}
+
+/* Header */
+header {
+    background-color: #3650c0;
+    color: white;
+    padding: 15px;
+    font-size: 24px;
+}
+
+/* Category Selection */
+#category-selection {
+    display: grid;
+    grid-template-columns: 1fr; /* Single column for h2 */
+    gap: 20px;
+    padding: 30px;
+    max-width: 900px;
+    margin: auto;
+}
+
+#category-selection h2 {
+    text-align: center;
+    margin-bottom: 20px; /* Add some space below h2 */
+}
+
+#category-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Responsive grid */
+    gap: 20px;
+}
+
+/* Category Buttons with Background Image */
+.category {
+    background-size: cover;
+    background-position: center;
+    color: white;
+    font-size: 20px;
+    font-weight: bold;
+    padding: 60px 20px;
+    border-radius: 15px;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+    cursor: pointer;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Individual Category Background Images */
+#fruits { background-image: url('https://m.media-amazon.com/images/I/51YXZs5VBQL.jpg'); }
+#emojis { background-image: url('https://play-lh.googleusercontent.com/970RCUKXJs9RfjfoDCGhdq_9pQO80Wn2EwM-ZLS3hJ_p7UwNHIUQJf0OqxsyOie8_6I=w240-h480-rw'); } /* Replace with your image */
+#animals { background-image: url('https://play-lh.googleusercontent.com/5lejxr6XyZljZLiOw-0vrG3jb9aeuyJvxu1fudeI85CvNCzaVyvQ9tgjR4gfoGsLHw'); } /* Replace with your image */
+#planets { background-image: url('https://natashalh.com/wp-content/uploads/2020/04/planet-matching-cards.jpg'); } /* Replace with your image */
+
+/* Hover Effect */
+.category:hover {
+    transform: scale(1.05);
+    opacity: 0.9;
+}
+
+/* Game Over Box */
+#game-over {
+    background: rgba(255, 255, 255, 0.9);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+    max-width: 400px;
+    margin: 20px auto;
+    display: none; /* Initially hidden */
+}
+
+/* Game Board */
+#board {
+    display: grid;
+    grid-template-columns: repeat(4, 80px);
+    grid-gap: 8px;
+    justify-content: center;
+    padding: 20px;
+}
+
+.card {
+    width: 80px;
+    height: 80px;
+    background-color: #007bff;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.card.flipped {
+    background-color: white;
+    color: black;
+}
+
+/* Game Over Section */
+#game-over {
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    width: 300px;
+    margin: 20px auto;
+    box-shadow: 0px 0px 10px gray;
+}
+
+/* Footer */
+footer {
+    margin-top: 20px;
+    background-color: #1b70e7;
+    color: white;
+    padding: 10px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}

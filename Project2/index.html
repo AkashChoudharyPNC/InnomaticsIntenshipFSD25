@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Memory Match Game</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <header>
+        <h1>Memory Match Game</h1>
+    </header>
+
+    <!-- Category Selection -->
+    <section id="category-selection">
+        <h2>Select a Category</h2>
+        <div id="category-grid">
+            <div class="category" id="fruits" onclick="startGame('fruits')">
+                <h3>🍎 Fruits</h3>
+                <p>Match different fruit pairs.</p>
+            </div>
+            <div class="category" id="emojis" onclick="startGame('emojis')">
+                <h3>😊 Emojis</h3>
+                <p>Find matching emoji pairs.</p>
+            </div>
+            <div class="category" id="animals" onclick="startGame('animals')">
+                <h3>🐶 Animals</h3>
+                <p>Match different animal pairs.</p>
+            </div>
+            <div class="category" id="planets" onclick="startGame('planets')">
+                <h3>🪐 Planets</h3>
+                <p>Match planets from our solar system.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Game Board -->
+    <section id="game-container" style="display: none;">
+        <h2 id="timer">Time Left: 30s</h2>
+        <div id="board"></div>
+    </section>
+
+    <!-- Game Over Screen -->
+    <section id="game-over" style="display: none;">
+        <h2>Game Over!</h2>
+        <p>Your Score: <span id="final-score">0</span></p>
+        <p>High Score: <span id="high-score">0</span></p>
+        <p>Do you want to play again?</p>
+        <button onclick="restartGame(true)">Yes</button>
+        <button onclick="restartGame(false)">No</button>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 Memory Match Game</p>
+    </footer>
+
+    <script src="scripts.js"></script>
+</body>
+</html>
